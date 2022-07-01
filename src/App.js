@@ -1,4 +1,5 @@
 import React from "react";
+// import HackerNews from "./components/useEffect/news/HackerNews";
 // import Counter from "./components/useEffect/counter/Counter";
 // import Photos from "./components/useEffect/photo/Photos";
 // import Timer from "./components/useEffect/Timer";
@@ -25,6 +26,8 @@ const App = () => {
       {/* <Counter></Counter> */}
       {/* <Timer></Timer> */}
       {/* <Header></Header> */}
+      {/* <HackerNews></HackerNews> */}
+      
     </div>
   );
 };
