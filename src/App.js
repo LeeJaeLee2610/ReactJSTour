@@ -1,7 +1,8 @@
 import React from "react";
+import Input from "./components/form/Input";
 // import Blog from "./components/ref_custom_hooks/Blog";
-import SideBarMenu from "./components/ref_custom_hooks/SideBarMenu";
-import Dropdown from "./components/ref_custom_hooks/Dropdown";
+// import SideBarMenu from "./components/ref_custom_hooks/SideBarMenu";
+// import Dropdown from "./components/ref_custom_hooks/Dropdown";
 // import TextAreaAutoResize from "./components/ref_custom_hooks/TextAreaAutoResize";
 // import Clock from "./components/ref_custom_hooks/Clock";
 // import Input from "./components/ref_custom_hooks/Input";
@@ -15,7 +16,7 @@ import Dropdown from "./components/ref_custom_hooks/Dropdown";
 // import { ThemeProvider } from "styled-components";
 import "./index.css";
 // import CardTailwind from "./components/styledComponent/card/CardTailwind";
-import useClickOutSide from "../src/hooks/useClickOutSide";
+// import useClickOutSide from "../src/hooks/useClickOutSide";
 
 // const theme = {
 //   colors: {
@@ -25,7 +26,7 @@ import useClickOutSide from "../src/hooks/useClickOutSide";
 
 const App = () => {
   // const [show, setShow] = useState(false);
-  const { show, setShow, nodeRef } = useClickOutSide();
+  // const { show, setShow, nodeRef } = useClickOutSide();
   return (
     <div className="p-5">
       {/* <GlobalStyles></GlobalStyles> */}
@@ -41,14 +42,15 @@ const App = () => {
       {/* <TextAreaAutoResize></TextAreaAutoResize> */}
       {/* <Dropdown></Dropdown> */}
       {/* <Blog></Blog> */}
-      <button
+      {/* <button
         className="inline-block m-3 p-3 rounded-lg text-white bg-green-400"
         onClick={() => setShow(true)}
       >
         Show Menu
       </button>
       <SideBarMenu show={show} ref={nodeRef}></SideBarMenu>
-      <Dropdown></Dropdown>
+      <Dropdown></Dropdown> */}
+      <Input></Input>
     </div>
   );
 };
