@@ -43,6 +43,14 @@ const Form = () => {
     hobby: false,
   });
   const [nameError, setNameError] = useState("");
+  const handleSubmitForm = (e) => {
+    e.preventDefault();
+    if (values.fullname === "") {
+      setNameError("Your fullname is empty");
+    } else {
+      setNameError("");
+    }
+  };
   return (
     <div className="p-5">
       <form className="flex gap-x-3" autoComplete="off">
@@ -54,6 +62,7 @@ const Form = () => {
           placeholder="Enter your name"
           onChange={handleChange}
         />
+        {nameError}
         <input
           type="email"
           name="email"
@@ -61,8 +70,12 @@ const Form = () => {
           placeholder="Enter your email"
           onChange={handleChange}
         />
-        <input type="checkbox" name="hobby" onChange={handleChange} />
-        <button type="submit" className="p-3 rounded-lg text-white bg-blue-300">
+        {/* <input type="checkbox" name="hobby" onChange={handleChange} /> */}
+        <button
+          type="submit"
+          className="p-3 rounded-lg text-white bg-blue-300"
+          onClick={handleSubmitForm}
+        >
           Submit
         </button>
         {/* {message}
