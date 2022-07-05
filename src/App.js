@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "./components/form/Input";
+import Form from "./components/form/Form";
 // import Blog from "./components/ref_custom_hooks/Blog";
 // import SideBarMenu from "./components/ref_custom_hooks/SideBarMenu";
 // import Dropdown from "./components/ref_custom_hooks/Dropdown";
@@ -50,7 +50,7 @@ const App = () => {
       </button>
       <SideBarMenu show={show} ref={nodeRef}></SideBarMenu>
       <Dropdown></Dropdown> */}
-      <Input></Input>
+      <Form></Form>
     </div>
   );
 };
