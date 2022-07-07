@@ -1,6 +1,8 @@
 import React from "react";
+// import SignUpForm from "./components/form/SignUpForm";
+import SignUpFormFinal from "./components/form/SignUpFormFinal";
 // import Form from "./components/form/Form";
-import MovieSearchApp from "./components/form/MovieSearchApp";
+// import MovieSearchApp from "./components/form/MovieSearchApp";
 // import Blog from "./components/ref_custom_hooks/Blog";
 // import SideBarMenu from "./components/ref_custom_hooks/SideBarMenu";
 // import Dropdown from "./components/ref_custom_hooks/Dropdown";
@@ -52,7 +54,9 @@ const App = () => {
       <SideBarMenu show={show} ref={nodeRef}></SideBarMenu>
       <Dropdown></Dropdown> */}
       {/* <Form></Form> */}
-      <MovieSearchApp></MovieSearchApp>
+      {/* <MovieSearchApp></MovieSearchApp> */}
+      {/* <SignUpForm></SignUpForm> */}
+      <SignUpFormFinal></SignUpFormFinal>
     </div>
   );
 };
