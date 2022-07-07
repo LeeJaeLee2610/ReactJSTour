@@ -10,6 +10,7 @@ const MovieSearchApp = () => {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(true);
   const queryDebounce = useDebounce(query, 500);
+  const OK = "Oi doi oi";
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
