@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
+import Modal from "./components/modal/Modal";
 // import SignUpForm from "./components/form/SignUpForm";
-import SignUpFormFinal from "./components/form/SignUpFormFinal";
+// import SignUpFormFinal from "./components/form/SignUpFormFinal";
 // import Form from "./components/form/Form";
 // import MovieSearchApp from "./components/form/MovieSearchApp";
 // import Blog from "./components/ref_custom_hooks/Blog";
@@ -8,7 +9,7 @@ import SignUpFormFinal from "./components/form/SignUpFormFinal";
 // import Dropdown from "./components/ref_custom_hooks/Dropdown";
 // import TextAreaAutoResize from "./components/ref_custom_hooks/TextAreaAutoResize";
 // import Clock from "./components/ref_custom_hooks/Clock";
-// import Input from "./components/ref_custom_hooks/Input";
+// import Input from "./components/ref_custom_hooks/Input";`
 // import HackerNews from "./components/useEffect/news/HackerNews";
 // import Counter from "./components/useEffect/counter/Counter";
 // import Photos from "./components/useEffect/photo/Photos";
@@ -30,8 +31,9 @@ import "./index.css";
 const App = () => {
   // const [show, setShow] = useState(false);
   // const { show, setShow, nodeRef } = useClickOutSide();
+  const [showModal, setShowModal] = useState(false);
   return (
-    <div className="p-5">
+    <Fragment>
       {/* <GlobalStyles></GlobalStyles> */}
       {/* <CardList></CardList> */}
       {/* <CardTailwind></CardTailwind> */}
@@ -56,8 +58,17 @@ const App = () => {
       {/* <Form></Form> */}
       {/* <MovieSearchApp></MovieSearchApp> */}
       {/* <SignUpForm></SignUpForm> */}
-      <SignUpFormFinal></SignUpFormFinal>
-    </div>
+      {/* <SignUpFormFinal></SignUpFormFinal> */}
+      <div>
+        <Modal open={showModal} handleClose={() => setShowModal(false)}></Modal>
+      </div>
+      <button
+        className="p-4 m-5 text-white bg-blue-500 rounded-md"
+        onClick={() => setShowModal(true)}
+      >
+        Show Modal
+      </button>
+    </Fragment>
   );
 };
 
