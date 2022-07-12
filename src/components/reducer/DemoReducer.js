@@ -1,5 +1,7 @@
 import React, { useReducer } from "react";
 
+// useReducer: trả về new state khi trả về 1 action
+
 const reducer = (state, action) => {
   switch (action) {
     case "TANG":
@@ -44,6 +46,12 @@ const userReducer = (state, action) => {
 
 const DemoReducer = () => {
   const [count, dispatch] = useReducer(reducer, 0);
+  /*
+    state: Trạng thái state
+    dispatch: Truyền vào các action
+    useReducer: Hàm để sử lý các action
+    initState: Trạng thái ban đầu của state
+  */
   const [user, userDispatch] = useReducer(userReducer, initState);
   const getUsers = () => {
     userDispatch({
