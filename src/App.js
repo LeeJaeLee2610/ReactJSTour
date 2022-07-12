@@ -1,8 +1,13 @@
 import React, { Fragment, useState } from "react";
+import { AuthProvider } from "./components/contexts/auth-context";
+import { GalleryProvider } from "./components/contexts/gallery-context";
+import CartList from "./components/gallery/CartList";
+import HeaderMain from "./components/gallery/HeaderMain";
+import PhotoList from "./components/gallery/PhotoList";
 // import Modal2 from "./components/modal/Modal2";
-import Modal from "./components/modal/Modal";
-import DropdownPortal from "./components/ref_custom_hooks/DropdownPortal";
-import Tooltip from "./components/tooltip/Tooltip";
+// import Modal from "./components/modal/Modal";
+// import DropdownPortal from "./components/ref_custom_hooks/DropdownPortal";
+// import Tooltip from "./components/tooltip/Tooltip";
 // import SignUpForm from "./components/form/SignUpForm";
 // import SignUpFormFinal from "./components/form/SignUpFormFinal";
 // import Form from "./components/form/Form";
@@ -62,7 +67,7 @@ const App = () => {
       {/* <MovieSearchApp></MovieSearchApp> */}
       {/* <SignUpForm></SignUpForm> */}
       {/* <SignUpFormFinal></SignUpFormFinal> */}
-      <div>
+      {/* <div>
         <Modal open={showModal} handleClose={() => setShowModal(false)}></Modal>
       </div>
       <button
@@ -76,7 +81,15 @@ const App = () => {
       </div>
       <div className="p-16 mt-16 ml-16">
         <Tooltip text="Hover me">This is a tooltip content</Tooltip>
-      </div>
+      </div> */}
+      {/* <Portal></Portal> */}
+      <AuthProvider>
+        <GalleryProvider>
+          <HeaderMain></HeaderMain>
+          <PhotoList></PhotoList>
+          <CartList></CartList>
+        </GalleryProvider>
+      </AuthProvider>
     </Fragment>
   );
 };
