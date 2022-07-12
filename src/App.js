@@ -1,9 +1,10 @@
-import React, { Fragment, useState } from "react";
-import { AuthProvider } from "./components/contexts/auth-context";
-import { GalleryProvider } from "./components/contexts/gallery-context";
-import CartList from "./components/gallery/CartList";
-import HeaderMain from "./components/gallery/HeaderMain";
-import PhotoList from "./components/gallery/PhotoList";
+import React, { Fragment } from "react";
+import DemoReducer from "./components/reducer/DemoReducer";
+// import { AuthProvider } from "./components/contexts/auth-context";
+// import { GalleryProvider } from "./components/contexts/gallery-context";
+// import CartList from "./components/gallery/CartList";
+// import HeaderMain from "./components/gallery/HeaderMain";
+// import PhotoList from "./components/gallery/PhotoList";
 // import Modal2 from "./components/modal/Modal2";
 // import Modal from "./components/modal/Modal";
 // import DropdownPortal from "./components/ref_custom_hooks/DropdownPortal";
@@ -39,7 +40,7 @@ import "./index.css";
 const App = () => {
   // const [show, setShow] = useState(false);
   // const { show, setShow, nodeRef } = useClickOutSide();
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
   return (
     <Fragment>
       {/* <GlobalStyles></GlobalStyles> */}
@@ -83,13 +84,14 @@ const App = () => {
         <Tooltip text="Hover me">This is a tooltip content</Tooltip>
       </div> */}
       {/* <Portal></Portal> */}
-      <AuthProvider>
+      {/* <AuthProvider>
         <GalleryProvider>
           <HeaderMain></HeaderMain>
           <PhotoList></PhotoList>
           <CartList></CartList>
         </GalleryProvider>
-      </AuthProvider>
+      </AuthProvider> */}
+      <DemoReducer></DemoReducer>
     </Fragment>
   );
 };
