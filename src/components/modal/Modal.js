@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 const Modal = ({ open = false, handleClose = () => {} }) => {
   if (typeof document === "undefined") return <div className="modal"></div>;
   return ReactDOM.createPortal(
+    // Khi modal ở trạng thái true thì sẽ ẩn đi với thuộc ính là opacity-0 vs invisible, Nếu như open = false thì sẽ xóa bỏ 2 thuộc tính đó để nó hiển thị
     <div
       className={`fixed inset-0 z-50 flex items-center justify-center p-5 modal ${
         open ? "" : "opacity-0 invisible"
@@ -15,7 +16,7 @@ const Modal = ({ open = false, handleClose = () => {} }) => {
       ></div>
       <div className="relative w-full modal-content bg-white z-10 p-10 rounded-lg max-w-[482px]">
         <span
-          className="absolute top-0 right-0 flex items-center justify-center cursor-pointer w-10 h-10 rounded-full bg-white p-1 -translate-y-2/4 translate-x-2/4"
+          className="absolute top-0 right-0 flex items-center justify-center w-10 h-10 p-1 bg-white rounded-full cursor-pointer -translate-y-2/4 translate-x-2/4"
           onClick={handleClose}
         >
           <svg
@@ -54,7 +55,7 @@ const Modal = ({ open = false, handleClose = () => {} }) => {
             placeholder="Enter your password"
           />
         </div>
-        <button className="w-full p-4 font-semibold text-base text-white bg-blue-500 rounded-lg">
+        <button className="w-full p-4 text-base font-semibold text-white bg-blue-500 rounded-lg">
           Sign in
         </button>
       </div>

@@ -1,5 +1,8 @@
 import React, { Fragment, useState } from "react";
+// import Modal2 from "./components/modal/Modal2";
 import Modal from "./components/modal/Modal";
+import DropdownPortal from "./components/ref_custom_hooks/DropdownPortal";
+import Tooltip from "./components/tooltip/Tooltip";
 // import SignUpForm from "./components/form/SignUpForm";
 // import SignUpFormFinal from "./components/form/SignUpFormFinal";
 // import Form from "./components/form/Form";
@@ -48,7 +51,7 @@ const App = () => {
       {/* <Dropdown></Dropdown> */}
       {/* <Blog></Blog> */}
       {/* <button
-        className="inline-block m-3 p-3 rounded-lg text-white bg-green-400"
+        className="inline-block p-3 m-3 text-white bg-green-400 rounded-lg"
         onClick={() => setShow(true)}
       >
         Show Menu
@@ -68,6 +71,12 @@ const App = () => {
       >
         Show Modal
       </button>
+      <div className="overflow-hidden">
+        <DropdownPortal></DropdownPortal>
+      </div>
+      <div className="p-16 mt-16 ml-16">
+        <Tooltip text="Hover me">This is a tooltip content</Tooltip>
+      </div>
     </Fragment>
   );
 };
