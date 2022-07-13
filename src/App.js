@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import DemoReducer from "./components/reducer/DemoReducer";
+// import DemoReducer from "./components/reducer/DemoReducer";
 // import { AuthProvider } from "./components/contexts/auth-context";
 // import { GalleryProvider } from "./components/contexts/gallery-context";
 // import CartList from "./components/gallery/CartList";
@@ -30,6 +30,11 @@ import DemoReducer from "./components/reducer/DemoReducer";
 import "./index.css";
 // import CardTailwind from "./components/styledComponent/card/CardTailwind";
 // import useClickOutSide from "../src/hooks/useClickOutSide";
+import { Routes, Route } from "react-router-dom";
+import Nav from "./components/page/Nav";
+import BlogPage from "./components/page/BlogPage";
+import ProfilePage from "./components/page/ProfilePage";
+import BlogPageDetails from "./components/page/BlogPageDetails";
 
 // const theme = {
 //   colors: {
@@ -91,7 +96,24 @@ const App = () => {
           <CartList></CartList>
         </GalleryProvider>
       </AuthProvider> */}
-      <DemoReducer></DemoReducer>
+      {/* <DemoReducer></DemoReducer> */}
+      {/* <Routes>
+        <Route path="/" element={<div>Home</div>}></Route>
+        <Route path="/about" element={<div>About</div>}></Route>
+        <Route path="/movie/:movie" element={<div>Detail</div>}></Route>
+      </Routes> */}
+      <Routes>
+        <Route path="/" element={<Nav></Nav>}>
+          <Route path="/" element={<>Home Page</>}></Route>
+          <Route path="/blog" element={<BlogPage></BlogPage>}></Route>
+          <Route
+            path="/blog/:id"
+            element={<BlogPageDetails></BlogPageDetails>}
+          ></Route>
+          <Route path="/profile" element={<ProfilePage></ProfilePage>}></Route>
+        </Route>
+        <Route path="*" element={<>This is 404 page</>}></Route>
+      </Routes>
     </Fragment>
   );
 };
